@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { UserService } from '../../Services/user.service';
 
 @Component({
   selector: 'app-sing-up',
@@ -12,7 +13,8 @@ export class SingUpComponent implements OnInit {
 
   constructor(
 
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private userService:UserService
 
   ) {
     this.validator()
@@ -26,14 +28,23 @@ export class SingUpComponent implements OnInit {
       name: [ '', Validators.required ],
       lastName: [ '', Validators.required ],
       email: [ '', [Validators.required, Validators.email] ],
-      password: [ '', Validators.required ],
+      password: [ '',[Validators.required, Validators.minLength(10)] ],
       role: [ 'User', Validators.required ],
       identificationNumber: [ '', Validators.required ],
     })
   }
     saveUser(){
       if(this.signForm.valid){
-        alert('Usuario en registro')
+        console.log('Mensaje ',this.signForm.value)
+        this.userService.createUser(this.signForm.value).subscribe(
+        (userCreated) => {
+          console.log(userCreated)
+          alert('el usuario se creo correctamente')},
+          (error) =>{
+            console.error('tuvimos un error ->', error)
+  
+          }
+        )
       }else{
         alert('El formulario es incorrecto')
       }
