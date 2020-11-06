@@ -1,1 +1,65 @@
-<p>contact works!</p>
+<div class="container text-center">
+    <form [formGroup]= "contactForm" (ngSubmit)="saveContact()">
+        <section class="">
+            <h3>¡Hola!</h3>
+            <h2>Contáctenos</h2>
+            <p>Déjanos tus felicitaciones,sugerencias,quejas o reclamos.</p>
+        </section>
+        <section class="">
+            <div>
+                <div class="">
+                    <label class="">Tipo documento:</label>
+                </div>
+                <select formControlName="idDoc" id="IdDoc" class="option-doc">
+                    <option value="1">seleccione una opción</option>
+                    <option value="2">Cédula de ciudadania</option>
+                    <option value="3">Cédula de Extranjería</option>
+                    <option value="4">Documento profesional de salud</option>
+                </select>
+            </div>
+            <div>
+                <div class="">
+                    <label class="">Nombre:</label>
+                </div>
+                <input formControlName="name" id="name" class="input-info">
+            </div>
+            <div>
+                <div class="">
+                    <label class="">Apellidos:</label>
+                </div>
+                <input formControlName="lastName" id="lastName" class="input-info">
+            </div>
+            <div>
+                <div class="">
+                    <label class="">Correo:</label>
+                </div>
+                <input formControlName="email" id="email" class="input-info">
+            </div>
+            <div>
+                <div class="">
+                    <label class="">Asunto:</label>
+                </div>
+                <input formControlName="issue" id="issue" class="input-info">
+            </div>
+            <div>
+                <div class="">
+                    <label class="">Mensaje:</label>
+                </div>
+                <textarea formControlName="message" id="message" class="input-info"></textarea>
+            </div>
+        </section>
+        <section class="">
+            <div class="">
+                <input formControlName="termsAndConditions" id="termsAndConditions" type="checkbox">
+                <label>Terminos y condiciones</label>
+            </div>
+            <div>
+                <input formControlName="dataTreatment" id="dataTreatment" type="checkbox">
+                <label>Tratamiento de datos</label>
+            </div>
+            <div>
+                <button class="">Enviar</button>
+            </div>
+        </section>
+    </form>
+</div>
