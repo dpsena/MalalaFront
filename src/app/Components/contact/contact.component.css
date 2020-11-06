@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0; 
+  }
+.input-info{
+    width: 250px;
+    height: 25px;
+    margin: 10px;
+}
+.option-doc {
+    width: 250px;
+    height: 25px;
+    margin: 10px;
+}
+.section-text{
+    width: 250px;
+    height: 25px;
+    margin: 10px; 
+}
+.check{
+    margin: 50px;
+}

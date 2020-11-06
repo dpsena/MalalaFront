@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contactForm: FormGroup
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { 
+    this.validator()
+  }
 
   ngOnInit(): void {
+  }
+
+  validator(){
+    this.contactForm = this.formBuilder.group({
+      idDoc: [ '', Validators.required ],
+      name: [ '', Validators.required ],
+      email: [ '', Validators.required, Validators.email ],
+      lastName: [ '', Validators.required ],
+      issue: [ '', Validators.required ],
+      message: [ '', Validators.required ],
+      termsAndConditions: [ '', Validators.required ],
+      dataTreatment: [ '', Validators.required ],
+    })
+  }
+  saveContact(){
+    if(this.contactForm.valid){
+      alert('La información será enviada')
+    }else{
+      alert('El formulario es incorrecto')
+    }
   }
 
 }
