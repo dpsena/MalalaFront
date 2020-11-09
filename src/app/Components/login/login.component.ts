@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import {UserService} from '../../Services/user.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +12,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private userService: UserService
   ) {
     this.validator()
    }
@@ -25,11 +28,19 @@ export class LoginComponent implements OnInit {
     })
   }
   
-  saveUser(){
-    if(this.loginForm.valid){
-      alert('Se va a guardar la información')
+  login(){
+    if(this.loginForm.valid)
+    {
+     this.userService.login(this.loginForm.value).subscribe(
+     (dataUser)=>{
+       console.log(dataUser['token'])
+     },
+     (error)=>{
+       console.error('Error ->',error)
+     })
     }else{
-      alert('El formulario no es valido')
+     alert('Debe diligenciar todos los campos')
+ 
     }
   }
 
