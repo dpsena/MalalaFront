@@ -17,6 +17,9 @@ import { LoginComponent } from './Components/login/login.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { TherapistComponent } from './Components/therapist/therapist.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { HomeProfessionalComponent } from './Components/home-professional/home-professional.component';
+import { HomePatientComponent } from './Components/home-patient/home-patient.component';
+import { AuthGuard } from './Guards/auth.guard';
 const routesApp: Routes =[
   { path: '', component: HomeComponent },
   {path: 'sing-up', component: SingUpComponent},
@@ -25,6 +28,8 @@ const routesApp: Routes =[
   {path: 'about-us', component: AboutUsComponent},
   {path: 'therapist', component: TherapistComponent},
   {path: 'reset-password', component: ResetPasswordComponent},
+  {path: 'home-professional',canActivate: [AuthGuard], data:{only:'Professional'}, component:HomeProfessionalComponent},
+  {path: 'home-patient',canActivate: [AuthGuard], component:HomePatientComponent}
 ]
 
 @NgModule({
@@ -38,7 +43,9 @@ const routesApp: Routes =[
     LoginComponent,
     AboutUsComponent,
     TherapistComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    HomeProfessionalComponent,
+    HomePatientComponent
   ],
   imports: [
     BrowserModule,
