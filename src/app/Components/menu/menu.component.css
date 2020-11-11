@@ -1,3 +1,7 @@
 .menu{
     background-color:  #06070E !important;
 }
+
+.close-icon{
+    cursor: pointer;
+}

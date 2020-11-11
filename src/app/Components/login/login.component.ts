@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import {Router} from '@angular/router';
 import {UserService} from '../../Services/user.service';
-
+import {StorageService} from '../../Services/storage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router,
+    private storageService: StorageService
   ) {
     this.validator()
    }
@@ -29,18 +32,25 @@ export class LoginComponent implements OnInit {
   }
   
   login(){
-    if(this.loginForm.valid)
-    {
-     this.userService.login(this.loginForm.value).subscribe(
-     (dataUser)=>{
-       console.log(dataUser['token'])
-     },
-     (error)=>{
-       console.error('Error ->',error)
-     })
+    if(this.loginForm.valid){
+        this.userService.login(this.loginForm.value).subscribe(
+          (dataUser) =>{
+            this.storageService.saveToken(dataUser['token'])
+            const infoUser = this.storageService.dataUser()
+            if(infoUser.role == 'Professional'){
+              this.router.navigate(['/home-professional'])
+            }else{
+              this.router.navigate(['/'])
+              //console.log(dataUser['token']) 
+            }
+            
+          },
+          (error) =>{
+            console.error('Error -> ', error.error.message)
+          }
+        )
     }else{
-     alert('Debe diligenciar todos los campos')
- 
+      alert('Debes llenar todos los campos.')
     }
   }
 
