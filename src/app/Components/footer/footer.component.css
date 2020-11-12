@@ -12,3 +12,31 @@
 .row{
     margin: 0 !important;
 }
+.cont-footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #06070E;
+}
+.footer-items1{
+    margin-top: 2%;
+}
+
+.footer-items1 p{
+    color: white;
+    margin-left: 18%;
+}
+.footer-items1 p:hover{
+    color: #09ABC4;
+}
+.footer-items1 i{
+    font-size: 30px;
+    color: white;
+    margin-right: 5%;
+    margin-top: 12%;
+}
+.footer-items1 i:hover{
+    color: #09ABC4;
+}
+.img{
+    margin-top: 5%;
+}
