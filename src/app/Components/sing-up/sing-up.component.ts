@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';  
 import { UserService } from '../../Services/user.service';
+
 
 @Component({
   selector: 'app-sing-up',
@@ -14,7 +15,7 @@ export class SingUpComponent implements OnInit {
   constructor(
 
     private formBuilder: FormBuilder,
-    private userService:UserService
+    private userService:UserService,
 
   ) {
     this.validator()
