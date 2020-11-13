@@ -20,6 +20,10 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
 import { HomeProfessionalComponent } from './Components/home-professional/home-professional.component';
 import { HomePatientComponent } from './Components/home-patient/home-patient.component';
 import { AuthGuard } from './Guards/auth.guard';
+import { ListUserComponent } from './Components/list-user/list-user.component';
+import { UpdateUserComponent } from './Components/update-user/update-user.component';
+import { DeleteUserComponent } from './Components/delete-user/delete-user.component';
+import { ListProfessionalComponent } from './Components/list-professional/list-professional.component';
 
 const routesApp: Routes =[
   {path: '', component: HomeComponent },
@@ -30,7 +34,11 @@ const routesApp: Routes =[
   {path: 'therapist', component: TherapistComponent},
   {path: 'reset-password', component: ResetPasswordComponent},
   {path: 'home-professional',canActivate: [AuthGuard], data:{only:'Professional'}, component:HomeProfessionalComponent},
-  {path: 'home-patient',canActivate: [AuthGuard], component:HomePatientComponent}
+  {path: 'home-patient',canActivate: [AuthGuard], component:HomePatientComponent},
+  {path: 'list-user',canActivate: [AuthGuard], component:ListUserComponent},
+  {path: 'update-user',canActivate: [AuthGuard], component:UpdateUserComponent},
+  {path: 'delete-user',canActivate: [AuthGuard], component:DeleteUserComponent},
+  {path: 'list-professional',canActivate: [AuthGuard], component: ListProfessionalComponent}
 ]
 
 @NgModule({
@@ -46,7 +54,11 @@ const routesApp: Routes =[
     TherapistComponent,
     ResetPasswordComponent,
     HomeProfessionalComponent,
-    HomePatientComponent
+    HomePatientComponent,
+    ListUserComponent,
+    UpdateUserComponent,
+    DeleteUserComponent,
+    ListProfessionalComponent
   ],
   imports: [
     BrowserModule,
