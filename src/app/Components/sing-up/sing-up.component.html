@@ -21,7 +21,7 @@
           <div class="form-group col-md-6" >
             <label>Contraseña:</label>
             <input formControlName="password" id="password" type="password" class="form-control" >
-            <p *ngIf="signForm.get('password').errors?.minlength"class="error-message">Password incorrecto</p>
+            <p *ngIf="signForm.get('password').errors?.minlength"class="error-message">La contraseña debe tener mas de 6 caracteres</p>
           </div>
         </div>
         <div class="form-row" >
