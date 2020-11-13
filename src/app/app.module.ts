@@ -21,6 +21,7 @@ import { HomeProfessionalComponent } from './Components/home-professional/home-p
 import { HomePatientComponent } from './Components/home-patient/home-patient.component';
 import { AuthGuard } from './Guards/auth.guard';
 
+
 const routesApp: Routes =[
   {path: '', component: HomeComponent },
   {path: 'sing-up', component: SingUpComponent},
@@ -46,7 +47,8 @@ const routesApp: Routes =[
     TherapistComponent,
     ResetPasswordComponent,
     HomeProfessionalComponent,
-    HomePatientComponent
+    HomePatientComponent,
+   
   ],
   imports: [
     BrowserModule,
