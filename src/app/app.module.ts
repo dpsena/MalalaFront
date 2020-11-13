@@ -20,8 +20,9 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
 import { HomeProfessionalComponent } from './Components/home-professional/home-professional.component';
 import { HomePatientComponent } from './Components/home-patient/home-patient.component';
 import { AuthGuard } from './Guards/auth.guard';
+
 const routesApp: Routes =[
-  { path: '', component: HomeComponent },
+  {path: '', component: HomeComponent },
   {path: 'sing-up', component: SingUpComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'login', component: LoginComponent},
