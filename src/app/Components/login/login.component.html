@@ -1,19 +1,25 @@
-<div class="container text-center">
-    <h1 class="m-5">Iniciar Sesión</h1>
-    <form [formGroup]='loginForm' (ngSubmit)='login()'>
-        <div class="form-row justify-content-center">
-            <div class="form-group col-md-6">
-                <label>Correo: </label>
-                <input formControlName="email" type="email" class="form-control" id="email">
+<div class="conteiner img-fondo">
+    <div class="row justify-content-center pt-5 mt-5 m-1">
+        <div class="col-md-4 formulario">
+
+            <div class="form-group text-center pt-3">
+                <h1 class="text-light">Iniciar sesión</h1>
             </div>
-        </div>
-        <div class="form-row justify-content-center">
-            <div class="form-group col-md-6">
-                <label>Contraseña:  </label>
-                <input formControlName="password" type="password" class="form-control" id="password">
+            <form [formGroup]='loginForm' (ngSubmit)='login()'>
+                <div class="form-group mx-sm-4 pt-3">
+                    <input formControlName="email" type="email" class="form-control" id="email" placeholder="Correo">
+                </div>
+                <div class="form-group mx-sm-4 pt-3">
+                    <input formControlName="password" type="password" class="form-control" id="password"
+                        placeholder="Contraseña">
+                </div>
+                <div class="form-group mx-sm-4 text-right text-center">
+                <p routerLink='/reset-password' class="frase">¿Olvidaste tu Contraseña?</p>
             </div>
+                <div class="form-group mx-sm-4 pb-">
+                    <button class="btn btn-block ingresar">Iniciar sesión</button>
+                </div>
+            </form>
         </div>
-        <p routerLink='/reset-password' class="frase">¿Olvidaste tu Contraseña?</p>
-        <button class="btn btn-info">Ingresar</button>
-    </form>
+    </div>
 </div>
