@@ -1,3 +1,72 @@
 .frase:hover{
     color: #307272;
 }
+
+/*CSS HEADER */
+.bg-pag{
+    /* background-color:#07070ea8  !important;*/
+     background-color: #06070E !important
+ }
+ .tit-text{
+     font-size: 20px;
+     color: rgb(0, 0, 0);
+     text-align: center;
+     padding-top: 2%;
+ }
+ 
+ .img-fondo{
+     background-image: url('src/assets/img/fondo.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+ }
+  /*CSS FORMULARIO */
+ .formulario{
+     background: rgba(54, 54, 54, 0.1);
+     padding: 10px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(54, 54, 54, 0.1) ;
+     outline: none;
+     box-shadow: none;
+     margin-top: 20px;
+     margin-bottom: 20px;
+ 
+ }
+ .form-control:focus{
+     background: none;
+     box-shadow: none;
+     outline: none;
+ 
+ 
+ }
+ .form-control{
+     background: rgba(0 , -0 , -0,   0.3);
+     border-style: none;
+     transition: o.5s ease-in;
+ }
+ 
+ .form-control::placeholder{
+     color: rgb(0, 0, 0);
+ }
+ .ingresar{
+     background: #b1869f ;
+     padding: 10px;
+     font-size: 16px;
+     font-weight: 700!important;
+     color: #fff;
+     transition: 0,5s ease-in;
+ }
+ 
+ .olvidar{
+     color: black;
+     text-decoration-style: none;
+     text-decoration-line: none;
+ }
+ 
+ .olvidar:hover{
+     color: white;
+     text-decoration-style: none;
+     text-decoration-line: none;
+     cursor: pointer;
+ }
+ 
