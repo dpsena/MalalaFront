@@ -1,0 +1,143 @@
+
+.bg-dark{
+    background-color: transparent !important;
+}
+.font{
+    font-size: 20px;
+    color: white;
+}
+.bg-color{
+    background-color: transparent !important;
+}
+.tit-nav{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.tit-text{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+}
+.tit-text2{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding-top: 3%;
+    margin-left: 3%;
+    padding-bottom: 3%;
+}
+.tit-btn-login{
+    background-color: #5af299;
+    margin-left: 43%;
+    margin-top: 3%;
+}
+.img-logo{
+    padding: 0% 0% 0% 0%;
+    margin-top: 0% 0% 0% 0%;
+
+}
+.btn-blue{
+    background-color: #0474b4;
+}
+.img-logo{
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+
+
+/*CONTENT*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-us {
+    background-image: url(src/assets/img/question-mark-1872665_1280.jpg);
+   
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-us::before{
+    content: "";
+    width: 100%;
+    height: 450px;
+    position: absolute;
+}
+
+.about-us h1{
+    position: relative;
+    color: #abaced;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-size: 80px;
+    font-family: 'Neucha', cursive;
+    text-shadow: 2px 3px 1px rgb(156, 154, 154);
+}
+h4{
+    color: white;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sec-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+.sec-flex img{
+    width: 700px;
+    height: 500px;
+    margin-left: 30px;
+}
+.parrafo{
+    font-size: 20px;
+    padding: 50px;
+}
+.sec-flex-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+.sec-flex-2 img{
+    width: 700px;
+    height: 500px;
+    margin-left: 30px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+}
+
+.subtitulo{
+    color: white;
+    text-shadow: 2px 3px 1px black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-image: url(src/assets/img/question-mark-1872665_1280.jpg);
+    
+    font-family: 'Neucha', cursive;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.subtitulo h2{
+    font-size: 4rem;
+}
