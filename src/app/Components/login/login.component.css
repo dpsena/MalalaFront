@@ -5,7 +5,7 @@
 /*CSS HEADER */
 .bg-pag{
     /* background-color:#07070ea8  !important;*/
-     background-color: #06070E !important
+     background-color: #a3abeb !important
  }
  .tit-text{
      font-size: 20px;
@@ -14,7 +14,7 @@
      padding-top: 2%;
  }
  
- .img-fondo{
+ .img-{
      background-image: url('src/assets/img/fondo.png');
      background-repeat: no-repeat;
      background-size: cover;
@@ -67,7 +67,7 @@
  }
  
  .olvidar:hover{
-     color: white;
+     color: #0474b4;
      text-decoration-style: none;
      text-decoration-line: none;
      cursor: pointer;
