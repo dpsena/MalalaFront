@@ -25,6 +25,7 @@ import { UpdateUserComponent } from './Components/update-user/update-user.compon
 import { DeleteUserComponent } from './Components/delete-user/delete-user.component';
 import { ListProfessionalComponent } from './Components/list-professional/list-professional.component';
 
+
 const routesApp: Routes =[
   {path: '', component: HomeComponent },
   {path: 'sing-up', component: SingUpComponent},
@@ -55,10 +56,7 @@ const routesApp: Routes =[
     ResetPasswordComponent,
     HomeProfessionalComponent,
     HomePatientComponent,
-    ListUserComponent,
-    UpdateUserComponent,
-    DeleteUserComponent,
-    ListProfessionalComponent
+   
   ],
   imports: [
     BrowserModule,
