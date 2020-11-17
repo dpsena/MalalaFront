@@ -10,15 +10,17 @@
      padding-top: 2%;
  }
  
- .img{
-     background-image: url('src/assets/img/fondo.png');
+ .img-fondo{
+     background-image: url('src/assets/img/mental-health.jpg');
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
+     
  }
   /*CSS FORMULARIO */
+
  .formulario{
-     background: rgba(54, 54, 54, 0.1);
+     background: white;
      padding: 10px;
      border-radius: 10px;
      box-shadow: 0 0 10px rgba(54, 54, 54, 0.1) ;
@@ -36,16 +38,17 @@
  
  }
  .form-control{
-     background: rgba(0 , -0 , -0,   0.3);
+     background: white;
      border-style: none;
      transition: o.5s ease-in;
+     border-bottom: #0bacc4 solid 1px;
  }
  
  .form-control::placeholder{
      color: rgb(0, 0, 0);
  }
  .ingresar{
-     background: #b1869f ;
+     background: #0bacc4 ;
      padding: 10px;
      font-size: 16px;
      font-weight: 600!important;
@@ -65,7 +68,7 @@
     }
 
     .boton{
-        background: #06070E ;
+        background: #09abc4;
         padding: 7px;
         font-size: 16px;
         font-weight: 700!important;
@@ -74,5 +77,5 @@
         border-radius: 3%;
     }
     .boton:hover{
-       background-color: #09abc4 ;
+       background-color:  #06070E  ;
    }

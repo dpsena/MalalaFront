@@ -3,6 +3,9 @@
     background-color:  #06070E !important;
     color:rgb(244, 244, 247);
 }
+.bg-color{
+    background-color: #0bacc4 !important;
+}
 
 .close-icon{
     cursor: pointer;

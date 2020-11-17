@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
             if(infoUser.role == 'Professional'){
               this.router.navigate(['/home-professional'])
             }else{
-              this.router.navigate(['/'])
+              this.router.navigate(['/home-patient'])
               //console.log(dataUser['token']) 
             }
             
