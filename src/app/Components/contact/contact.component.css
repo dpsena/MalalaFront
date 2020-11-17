@@ -2,21 +2,77 @@
     margin: 0;
     padding: 0; 
   }
-.input-info{
-    width: 250px;
-    height: 25px;
+.container {
+    margin: 60px;
+}
+
+.label-check{
+    margin: 20px;
+}
+.input-check{
+    margin-top: 15px;
+}
+.contact {
+    background-color: pink; 
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact::before{
+    content: "";
+    width: 100%;
+    height: 450px;
+    position: absolute;
+}
+
+.btn-info{
+    background-color: #0474b4;
+    border-color: #0474b4;
+    width: 20%;
+    height: 25%;
+}
+label{
     margin: 10px;
 }
-.option-doc {
-    width: 250px;
-    height: 25px;
-    margin: 10px;
+.div-check{
+    margin: 15px;
 }
-.section-text{
-    width: 250px;
-    height: 25px;
-    margin: 10px; 
-}
-.check{
-    margin: 50px;
-}
+input[type="text"] {
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  
+  .inputWithIcon input[type="text"] {
+    padding-left: 40px;
+  }
+  
+  .inputWithIcon {
+    position: relative;
+  }
+  
+  .inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+  select, textarea{
+    border: 2px solid #aaa;
+    border-radius: 4px;
+  }
+
+  select{
+      margin-top: 15px;
+  }
