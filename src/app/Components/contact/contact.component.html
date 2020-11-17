@@ -1,65 +1,62 @@
-<div class="container text-center">
-    <form [formGroup]= "contactForm" (ngSubmit)="saveContact()">
-        <section class="">
+<div>
+    <form [formGroup]="contactForm" (ngSubmit)="saveContact()">
+        <section class="text-center contact">
             <h3>¡Hola!</h3>
             <h2>Contáctenos</h2>
-            <p>Déjanos tus felicitaciones,sugerencias,quejas o reclamos.</p>
+            <p>Déjanos tus felicitaciones, sugerencias, quejas o reclamos.</p>
         </section>
-        <section class="">
-            <div>
-                <div class="">
-                    <label class="">Tipo documento:</label>
-                </div>
-                <select formControlName="idDoc" id="IdDoc" class="option-doc">
-                    <option value="1">seleccione una opción</option>
-                    <option value="2">Cédula de ciudadania</option>
-                    <option value="3">Cédula de Extranjería</option>
-                    <option value="4">Documento profesional de salud</option>
+        <div class="container">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Tipo de identificación:</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>seleccione una opción</option>
+                    <option>Cédula de ciudadania</option>
+                    <option>Cédula de Extranjería</option>
+                    <option>Documento profesional de salud</option>
                 </select>
             </div>
-            <div>
-                <div class="">
-                    <label class="">Nombre:</label>
+                <label>Nombres:</label>
+                <div class="inputWithIcon">
+                    <input formControlName="name" id="name" type="text"
+                        class="form-control" placeholder="Tu nombre">
+                    <i class="fas fa-user" aria-hidden="true"></i>
                 </div>
-                <input formControlName="name" id="name" class="input-info">
-            </div>
-            <div>
-                <div class="">
-                    <label class="">Apellidos:</label>
+                <label>Apellidos:</label>
+                <div class="inputWithIcon">
+                    <input formControlName="lastName" id="lastName" type="text"
+                    class="form-control" placeholder="Tu apellido">
+                    <i class="fas fa-user-tie"></i>
                 </div>
-                <input formControlName="lastName" id="lastName" class="input-info">
-            </div>
-            <div>
-                <div class="">
-                    <label class="">Correo:</label>
+                <label>Correo:</label>
+                <div class="inputWithIcon">
+                    <input formControlName="email" id="email" type="text"
+                    class="form-control" placeholder="Tu correo">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <input formControlName="email" id="email" class="input-info">
+                <label>Asunto:</label>
+                <div class="inputWithIcon">
+                    <input formControlName="issue" id="issue" type="text"
+                    class="form-control" placeholder="¿Cuál es el asunto?">
+                    <i class="fas fa-sticky-note"></i>
+                </div> 
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Mensaje:</label>
+                    <textarea class="form-control inputWithIcon" id="exampleFormControlTextarea1"
+                    rows="3" placeholder="¡Cuéntanos todo para ayudarte!"></textarea>
             </div>
-            <div>
-                <div class="">
-                    <label class="">Asunto:</label>
-                </div>
-                <input formControlName="issue" id="issue" class="input-info">
+            <div class="form-group form-check text-center div-check">
+                <input type="checkbox" class="form-check-input input-check"
+                    id="exampleCheck1">
+                <label class="form-check-label label-check" for="exampleCheck1">Terminos
+                    y condiciones</label>
+                <input type="checkbox" class="form-check-input input-check"
+                    id="exampleCheck1">
+                <label class="form-check-label label-check" for="exampleCheck1">Tratamiento
+                    de datos</label>
             </div>
-            <div>
-                <div class="">
-                    <label class="">Mensaje:</label>
-                </div>
-                <textarea formControlName="message" id="message" class="input-info"></textarea>
+            <div class="text-center">
+                <button class="btn btn-info text-center">Enviar</button>
             </div>
-        </section>
-        <section class="">
-            <div class="">
-                <input formControlName="termsAndConditions" id="termsAndConditions" type="checkbox">
-                <label>Terminos y condiciones</label>
-            </div>
-            <div>
-                <input formControlName="dataTreatment" id="dataTreatment" type="checkbox">
-                <label>Tratamiento de datos</label>
-            </div>
-            <div>
-                <button class="">Enviar</button>
-            </div>
-        </section>
+        </div>
     </form>
 </div>

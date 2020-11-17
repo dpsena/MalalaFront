@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+.container{
+    /*background: url('img/breakfast-1663295_1280.jpg');*/
+    width: 100%;
+    height: 900px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.container:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.container h1, h4 {
+    position: relative;
+}
+
+.container h1 {
+    font-size: 60px;
+    font-family: 'Merienda One', cursive;
+    margin-left: 100px;
+    color: rgb(135, 135, 135);
+}
+.container h4{
+    font-size: 25px;
+    width: 60%;
+    text-align: center;
+    color: rgb(162, 162, 162);
+    font-family: 'Xanh Mono', monospace;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+.icons{
+    width: 80%;
+    width: 75%;
+    text-align: center;
+
+}
+.icon{
+    margin: 50px;
+    color: rgb(135, 135, 135);
+}
+.options{
+    margin-top: 50px;
+    width: 75%;
+    text-align: center;
+}
+.options a{
+    margin-left: 30px;
+    font-family: 'Xanh Mono', monospace;
+    color: white;
+    font-size: 20px;
+}
