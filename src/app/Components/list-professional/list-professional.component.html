@@ -1,1 +1,21 @@
-<p>list-professional works!</p>
+<div class="container mt-5" >
+    <h1>Lista de Profesionales</h1>
+    <div class="row">
+        <div class="col mb-4" *ngFor="let user of allProfessionals">
+            <div class="card" style="width: 18rem;"  >
+                <div class="card-body">
+                  <h5 class="card-title">{{user.name}}</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Apellido: </b> {{user.lastName}} </li>
+                    <li class="list-group-item"><b>Correo Electronico: </b> {{user.email}} </li>
+                    <li class="list-group-item"><b>Contraseña: </b> {{user.password}} </li>
+                    <li class="list-group-item"><b>Rol: </b> {{user.role}} </li>
+                    <li class="list-group-item"><b>Numero de identificación: </b> {{user.identificationNumber}} </li>
+                  </ul>
+                  <a  class="card-link" (click)="updateBook(user)">Modificar Professional</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
