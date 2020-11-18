@@ -5,8 +5,6 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 
 
-
-
 import { AppComponent } from './app.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -24,6 +22,8 @@ import { ListUserComponent } from './Components/list-user/list-user.component';
 import { UpdateUserComponent } from './Components/update-user/update-user.component';
 import { DeleteUserComponent } from './Components/delete-user/delete-user.component';
 import { ListProfessionalComponent } from './Components/list-professional/list-professional.component';
+import { UpdateProfessionalComponent } from './Components/update-professional/update-professional.component';
+import { ListPatientComponent } from './Components/list-patient/list-patient.component';
 
 
 const routesApp: Routes =[
@@ -39,7 +39,10 @@ const routesApp: Routes =[
   {path: 'list-user',canActivate: [AuthGuard], component:ListUserComponent},
   {path: 'update-user',canActivate: [AuthGuard], component:UpdateUserComponent},
   {path: 'delete-user',canActivate: [AuthGuard], component:DeleteUserComponent},
-  {path: 'list-professional',canActivate: [AuthGuard], component: ListProfessionalComponent}
+  {path: 'list-professional',canActivate: [AuthGuard], component: ListProfessionalComponent},
+  {path: 'list-patient',canActivate: [AuthGuard], component: ListPatientComponent},
+  {path: 'update-professional',canActivate: [AuthGuard], component:UpdateProfessionalComponent}
+
 ]
 
 @NgModule({
@@ -56,6 +59,12 @@ const routesApp: Routes =[
     ResetPasswordComponent,
     HomeProfessionalComponent,
     HomePatientComponent,
+    UpdateProfessionalComponent,
+    ListPatientComponent,
+    ListProfessionalComponent,
+    DeleteUserComponent,
+    UpdateUserComponent,
+    ListUserComponent
    
   ],
   imports: [
