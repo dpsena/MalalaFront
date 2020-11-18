@@ -24,6 +24,9 @@ import { DeleteUserComponent } from './Components/delete-user/delete-user.compon
 import { ListProfessionalComponent } from './Components/list-professional/list-professional.component';
 import { UpdateProfessionalComponent } from './Components/update-professional/update-professional.component';
 import { ListPatientComponent } from './Components/list-patient/list-patient.component';
+import { AppointmentComponent } from './Components/appointment/appointment.component';
+import { BillingComponent } from './Components/billing/billing.component';
+import { PaymentComponent } from './Components/payment/payment.component';
 
 
 const routesApp: Routes =[
@@ -41,7 +44,10 @@ const routesApp: Routes =[
   {path: 'delete-user',canActivate: [AuthGuard], component:DeleteUserComponent},
   {path: 'list-professional',canActivate: [AuthGuard], component: ListProfessionalComponent},
   {path: 'list-patient',canActivate: [AuthGuard], component: ListPatientComponent},
-  {path: 'update-professional',canActivate: [AuthGuard], component:UpdateProfessionalComponent}
+  {path: 'update-professional',canActivate: [AuthGuard], component:UpdateProfessionalComponent},
+  {path: 'appointment',canActivate: [AuthGuard], component:AppointmentComponent},
+  {path: 'billing',canActivate: [AuthGuard], component:BillingComponent},
+  {path: 'payment',canActivate: [AuthGuard], component:PaymentComponent}
 
 ]
 
@@ -64,7 +70,10 @@ const routesApp: Routes =[
     ListProfessionalComponent,
     DeleteUserComponent,
     UpdateUserComponent,
-    ListUserComponent
+    ListUserComponent,
+    AppointmentComponent,
+    BillingComponent,
+    PaymentComponent
    
   ],
   imports: [
