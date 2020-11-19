@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  user
+  user:any
   constructor(
     private storageService: StorageService,
     private router : Router
