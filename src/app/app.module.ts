@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 
 
@@ -27,6 +27,10 @@ import { ListPatientComponent } from './Components/list-patient/list-patient.com
 import { AppointmentComponent } from './Components/appointment/appointment.component';
 import { BillingComponent } from './Components/billing/billing.component';
 import { PaymentComponent } from './Components/payment/payment.component';
+import { RecordsComponent } from './Components/records/records.component';
+import { RecommendationComponent } from './Components/recommendation/recommendation.component';
+import { CreateRecordsComponent } from './Components/create-records/create-records.component';
+
 
 
 const routesApp: Routes =[
@@ -47,7 +51,10 @@ const routesApp: Routes =[
   {path: 'update-professional',canActivate: [AuthGuard], component:UpdateProfessionalComponent},
   {path: 'appointment',canActivate: [AuthGuard], component:AppointmentComponent},
   {path: 'billing',canActivate: [AuthGuard], component:BillingComponent},
-  {path: 'payment',canActivate: [AuthGuard], component:PaymentComponent}
+  {path: 'payment',canActivate: [AuthGuard], component:PaymentComponent},
+  {path: 'records',canActivate: [AuthGuard], component:RecordsComponent},
+  {path: 'recommendation',canActivate: [AuthGuard], component:RecordsComponent},
+  {path: 'create-records',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
 
 ]
 
@@ -73,8 +80,10 @@ const routesApp: Routes =[
     ListUserComponent,
     AppointmentComponent,
     BillingComponent,
-    PaymentComponent
-   
+    PaymentComponent,
+    RecordsComponent,
+    RecommendationComponent,
+    CreateRecordsComponent,  
   ],
   imports: [
     BrowserModule,
