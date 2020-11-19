@@ -14,11 +14,11 @@ export class ListProfessionalComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    this.getAllProfessional()
   }
 
-  getAll(){
-    this.userService.getAll().subscribe( 
+  getAllProfessional(){
+    this.userService.getAllProfessional().subscribe( 
       (professionals) =>{
         console.log(this.allProfessionals);
         this.allProfessionals = professionals
