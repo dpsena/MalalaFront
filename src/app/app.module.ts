@@ -29,7 +29,9 @@ import { BillingComponent } from './Components/billing/billing.component';
 import { PaymentComponent } from './Components/payment/payment.component';
 import { RecordsComponent } from './Components/records/records.component';
 import { RecommendationComponent } from './Components/recommendation/recommendation.component';
-import { CreateRecordsComponent } from './Components/create-records/create-records.component';
+import { CreateRecordsComponent} from './Components/create-records/create-records.component';
+import { PathologyComponent } from './Components/pathology/pathology.component';
+import { ObservationComponent } from './Components/observation/observation.component';
 
 
 
@@ -52,10 +54,11 @@ const routesApp: Routes =[
   {path: 'appointment',canActivate: [AuthGuard], component:AppointmentComponent},
   {path: 'billing',canActivate: [AuthGuard], component:BillingComponent},
   {path: 'payment',canActivate: [AuthGuard], component:PaymentComponent},
-  {path: 'records',canActivate: [AuthGuard], component:RecordsComponent},
-  {path: 'recommendation',canActivate: [AuthGuard], component:RecordsComponent},
+  {path: 'records',canActivate: [AuthGuard],data:{only:'User'}, component:RecordsComponent},
+  {path: 'recommendation',canActivate: [AuthGuard],data:{only:['Professional','User']}, component:RecordsComponent},
   {path: 'create-records',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
-
+  {path: 'pathology',canActivate: [AuthGuard],data:{only:['Professional','User']}, component:CreateRecordsComponent},
+  {path: 'observation',canActivate: [AuthGuard],data:{only:['Professional','User']}, component:CreateRecordsComponent},
 ]
 
 @NgModule({
@@ -83,7 +86,9 @@ const routesApp: Routes =[
     PaymentComponent,
     RecordsComponent,
     RecommendationComponent,
-    CreateRecordsComponent,  
+    CreateRecordsComponent,
+    PathologyComponent,
+    ObservationComponent  
   ],
   imports: [
     BrowserModule,
