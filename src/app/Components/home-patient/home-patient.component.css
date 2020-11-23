@@ -1,7 +1,8 @@
+
 /*CSS HEADER */
-.bg-pag{
+/*.bg-pag{
     /* background-color:#07070ea8  !important;*/
-     background-color: #06070E !important
+    /* background-color: #06070E !important
  }
  .tit-text{
      font-size: 20px;
@@ -19,7 +20,7 @@
  }
   /*CSS FORMULARIO */
 
- .formulario{
+ /*.formulario{
      background: white;
      padding: 10px;
      border-radius: 10px;
@@ -78,4 +79,76 @@
     }
     .boton:hover{
        background-color:  #06070E  ;
-   }
+   }*/
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+.cont-img{
+    background: url('src/assets/img/mental-health.jpg');
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+   align-content: center;
+}
+.cont-tit{
+    padding-left: 14%;
+}
+.cont-img:before{
+    content: "";
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    position: absolute;
+    opacity: 0.4;
+}
+
+.cont-img h1, h4 {
+    position: relative;
+}
+
+.cont-img h1 {
+    font-size: 60px;
+    /* font-family: 'Xanh Mono', monospace; */
+    margin-left: 100px;
+    color: black;
+}
+.cont-img h4{
+    font-size: 25px;
+    width: 60%;
+    text-align: center;
+    color:black;
+    /* font-family: 'Xanh Mono', monospace; */
+    margin-left: 120px;
+    margin-top: 20px;
+}
+.icons{
+    width: 80%;
+    width: 75%;
+    text-align: center;
+    padding-left: 23%;
+}
+.icon{
+    margin: 50px;
+    color: black;
+}
+.options{
+    margin-top: 50px;
+    width: 75%;
+    text-align: center;
+    padding-left: 22%;
+}
+.options a{
+    margin-left: 30px;
+    /* font-family: 'Xanh Mono', monospace; */
+    color: black;
+    font-size: 20px;
+}

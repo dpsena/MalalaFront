@@ -1,1 +1,28 @@
-<p>billing works!</p>
+<h1 class="text-center">Lista de pacientes</h1>
+<div class="container">
+    <div class="row">
+        <div class="col mb-5" *ngFor="let b of allBillings">
+            <div class="card" style="width: 18rem;"  >
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{b.titulo}} {{b.titulo}}</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Correo: </b>{{b.fechaExpedicion}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.fechaFacturacion}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.numbBilling}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.codBarra}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.calidaRetenedor}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.reteIca}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.reteIva}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.reteIva}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.declarado}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.nombreImpresor}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.nitImpresor}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.user}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.payment}}</li>
+                        <li class="list-group-item"><b>Correo: </b>{{b.ataraxia}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
