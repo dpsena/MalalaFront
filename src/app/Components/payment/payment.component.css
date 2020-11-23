@@ -1,0 +1,85 @@
+
+
+
+
+ /*CSS HEADER */
+.bg-pag{
+    /* background-color:#07070ea8  !important;*/
+     background-color: #06070E !important
+ }
+ .tit-text{
+     font-size: 20px;
+     color: rgb(0, 0, 0);
+     text-align: center;
+     padding-top: 2%;
+ }
+ 
+ .img-fondo{
+     background-image: url('src/assets/img/money.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     
+ }
+  /*CSS FORMULARIO */
+
+ .formulario{
+     background: white;
+     padding: 10px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(54, 54, 54, 0.1) ;
+     outline: none;
+     box-shadow: none;
+     margin-top: 20px;
+     margin-bottom: 20px;
+ 
+ }
+ .form-control:focus{
+     background: none;
+     box-shadow: none;
+     outline: none;
+ 
+ 
+ }
+ .form-control{
+     background: white;
+     border-style: none;
+     transition: o.5s ease-in;
+     border-bottom: #0bacc4 solid 1px;
+ }
+ 
+ .form-control::placeholder{
+     color: rgb(0, 0, 0);
+ }
+ .ingresar{
+     background: #0bacc4 ;
+     padding: 10px;
+     font-size: 16px;
+     font-weight: 600!important;
+     color: #fff;
+     transition: 0,5s ease-in;
+ }
+ .container-bn{
+    width: auto;
+    height: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 5%;
+        font-size: 8px;
+     
+       
+    }
+
+    .boton{
+        background: #09abc4;
+        padding: 7px;
+        font-size: 16px;
+        font-weight: 700!important;
+        color: #fff;
+        transition: 0,5s ease-in;
+        border-radius: 3%;
+    }
+    .boton:hover{
+       background-color:  #06070E  ;
+   }
