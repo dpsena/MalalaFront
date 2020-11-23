@@ -13,7 +13,7 @@ export class PaymentService {
   ) { }
 
   createPayment(formData){
-    return this.http.post<Payment>(`${this.apiURL}/payment/create`, formData)
+    return this.http.post<Payment>(`${this.apiURL}/payment/create` , formData)
   }
 
   

@@ -50,7 +50,7 @@ export class PaymentComponent implements OnInit {
         }
       )
     } else {
-      alert('Hubo inconvenientes al guardar el pago,verifique la información.')
+      alert('Hubo inconvenientes al guardar el pago, verifique la información.')
     }
   }
 
