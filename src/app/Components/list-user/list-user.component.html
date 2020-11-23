@@ -1,1 +1,15 @@
-<p>list-user works!</p>
+<h1 class="text-center">Lista de pacientes</h1>
+<div class="container">
+    <div class="row">
+        <div class="col mb-5" *ngFor="let u of allUsers">
+            <div class="card" style="width: 18rem;"  >
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{u.name}} {{u.lastName}}</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Correo: </b>{{u.email}}</li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
