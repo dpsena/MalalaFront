@@ -21,7 +21,12 @@ export class UserService {
     getAll(){
       return this.http.get(`${this.apiURL}/user/getAll`)
     }
-
+    getAllProfessional(){
+      return this.http.get(`${this.apiURL}/user/getAll?searchBy=Professional`)
+    }
+    getAllUser(){
+      return this.http.get(`${this.apiURL}/user/getAll?searchBy=User`)
+    }
     updateUser(formData, idUser){
       return this.http.put<User>(`${this.apiURL}/user/update/${idUser}`, formData);
     }
