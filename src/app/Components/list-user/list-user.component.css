@@ -9,3 +9,12 @@ h1{
     padding-top: 25px;
     padding-bottom: 40px;
 }
+
+.img-profesional{
+    width: 180px;
+    height: auto;
+    margin-left: 5%;
+}
+.btn-agendar{
+    margin-left: 10%;
+}

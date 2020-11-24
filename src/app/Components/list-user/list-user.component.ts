@@ -15,11 +15,11 @@ export class ListUserComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getAll()
+    this.getAllUser()
   }
 
-  getAll(){
-    this.userServices.getAll().subscribe(
+  getAllUser(){
+    this.userServices.getAllUser().subscribe(
       (users) => {
         this.allUsers = users
       },
