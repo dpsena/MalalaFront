@@ -1,1 +1,19 @@
-<p>pathology works!</p>
+<div class="d-flex justify-content-center">
+<h1>Patologías Salud Mental</h1>
+
+<form [formGroup]='pathologyForm' (ngSubmit)='savePathology()'>
+   
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Patología</h5>
+        <div class="form-group mx-sm-4 pt-3">
+            <input formControlName="characteristics" type="text" class="form-control" id="characteristics"
+                placeholder="Describa la pathología">
+        </div>
+        
+        <button class="btn btn-blue">Guardar</button>
+    </div>
+</div>
+
+</form>
+</div>
