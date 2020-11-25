@@ -1,0 +1,93 @@
+.option-doc{
+    width: 300px;
+    height: 40px;
+}
+
+button{
+    margin-top: 30px;
+    width: 200px;
+}
+
+
+/*CSS HEADER */
+.bg-pag{
+    /* background-color:#07070ea8  !important;*/
+     background-color: #a3abeb !important
+ }
+ .tit-text{
+     font-size: 20px;
+     color: rgb(0, 0, 0);
+     text-align: center;
+     padding-top: 2%;
+ }
+ 
+ .img-fondo{
+     background: url('src/assets/img/calendar-660670_1280.jpg'); 
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 700px !important;
+     background-attachment: fixed;
+ }
+ .conteiner{
+     padding-bottom: 10%;
+ }
+  /*CSS FORMULARIO */
+ .formulario{
+     /* background: rgba(54, 54, 54, 0.1); */
+     background: white;
+     padding: 10px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(54, 54, 54, 0.1) ;
+     outline: none;
+     box-shadow: none;
+     /* margin-bottom: 150px !important; */
+ 
+ }
+ .form-control:focus{
+     background: none;
+     box-shadow: none;
+     outline: none;
+ 
+ 
+ }
+ .form-control{
+     background: white;
+     border-style: none;
+     transition: o.5s ease-in;
+     border-bottom: 1px solid #0bacc4;
+ }
+ .form-control:hover{
+     border-bottom: 2px solid #0bacc4;
+ }
+ 
+ .form-control::placeholder{
+     color: rgb(0, 0, 0);
+ }
+ .ingresar{
+     background: #0bacc4 ;
+     padding: 10px;
+     font-size: 16px;
+     font-weight: 700!important;
+     color: #fff;
+     transition: 0,5s ease-in;
+ }
+ .ingresar:hover{
+     background-color: #06070E;
+ }
+ 
+ .olvidar{
+     color: black;
+     text-decoration-style: none;
+     text-decoration-line: none;
+ }
+ 
+ .olvidar:hover{
+     color: #0474b4;
+     text-decoration-style: none;
+     text-decoration-line: none;
+     cursor: pointer;
+ }
+ 
+ .conteiner{
+     height: 500px !important;
+ }
