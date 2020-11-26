@@ -58,7 +58,7 @@ const routesApp: Routes =[
   {path: 'records',canActivate: [AuthGuard],data:{only:'User'}, component:RecordsComponent},
   {path: 'recommendation',canActivate: [AuthGuard],data:{only:['Professional','User']}, component:RecordsComponent},
   {path: 'create-records',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
-  {path: 'pathology',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
+  {path: 'pathology',canActivate: [AuthGuard], component:CreateRecordsComponent},
   {path: 'observation',canActivate: [AuthGuard],data:{only:['Professional','User']}, component:CreateRecordsComponent},
   
 ]

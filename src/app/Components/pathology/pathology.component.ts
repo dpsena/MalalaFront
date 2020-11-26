@@ -28,7 +28,6 @@ export class PathologyComponent implements OnInit {
     this.pathologyForm = this.formBuilder.group({
     name:[ '', Validators.required ],
     characteristics:[ '', Validators.required ]
-
     })
   }
   getAll(){
@@ -49,8 +48,5 @@ export class PathologyComponent implements OnInit {
     }else{
       alert('valide la informacion creación  de nuevas patologias invalido no válido')
     }
-    
     }
-  
-   
 }
