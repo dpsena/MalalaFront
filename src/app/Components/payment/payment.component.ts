@@ -32,7 +32,7 @@ export class PaymentComponent implements OnInit {
     this.paymentForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email] ],
       date:[''],
-      status:[''],
+      status: ['True'],
       paymentMethods: ['', Validators.required],
       totalPayment:['', Validators.required],
       numberCard: ['', [Validators.required, Validators.minLength(16)]],
@@ -73,7 +73,7 @@ export class PaymentComponent implements OnInit {
   
   savePaymentMethods(event) {
     console.log(event.target.value)
-     this. paymentForm.get('paymentMethods').setValue(event.target.value)
+     this.paymentForm.get('paymentMethods').setValue(event.target.value)
   }
 }
 

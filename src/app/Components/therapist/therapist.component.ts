@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';  
 import { UserService } from '../../Services/user.service';
+const swal = require('sweetalert');
+
 @Component({
   selector: 'app-therapist',
   templateUrl: './therapist.component.html',
@@ -36,14 +38,15 @@ export class TherapistComponent implements OnInit {
       this.userService.createUser(this.signFormProfessional.value).subscribe(
       (professionalCreated) => {
         console.log(professionalCreated)
-        alert('el usuario se creo correctamente')},
+        swal('Proceso correcto',  'el usuario se creo correctamente', 'success')
+      },
         (error) =>{
           console.error('tuvimos un error ->', error)
 
         }
       )
     }else{
-      alert('El formulario es incorrecto')
+      swal('Proceso incorrecto',  'El formulario es incorrecto', 'error')
     }
   }
 

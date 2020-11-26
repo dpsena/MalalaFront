@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
   }
   saveContact(){
     if(this.contactForm.valid){
-      swal('Proceso correcto', 'La información será enviada', 'sucess')
+      swal('Proceso correcto', 'La información será enviada', 'success')
       //alert('La información será enviada')
     }else{
       swal('Proceso incorrecto', 'El formulario es incorrecto', 'error')
