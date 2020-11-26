@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import{RecordsService} from '../../Services/records.service';
+<<<<<<< HEAD
 import{PathologyService} from '../../Services/pathology.service';
 import{FormBuilder,Validators,FormGroup} from '@angular/forms';
 
+=======
+import{FormBuilder,Validators,FormGroup} from '@angular/forms'
+const swal = require('sweetalert')
+>>>>>>> 803e41d63eaa077cf5fd42e4f856d3b9c876f594
 
 @Component({
   selector: 'app-create-records',
@@ -57,14 +62,16 @@ export class CreateRecordsComponent implements OnInit {
 
         (recordCreated) => {
           console.log(recordCreated)
-          alert('La historia a sido creada correctamente')
+          swal('Proceso correcto',  'La historia a sido creada correctamente', 'sucess')
+          //alert('La historia a sido creada correctamente')
         },
         (error) => {
           console.error('Error=>', error)
         }
       )
     } else {
-      alert('Hubo inconvenientes al guardar la historia,verifique la información.')
+      swal('Proceso correcto', 'Hubo inconvenientes al guardar la historia,verifique la información.', 'error')
+      //alert('Hubo inconvenientes al guardar la historia,verifique la información.')
     }
   }
   savePathology(event){
