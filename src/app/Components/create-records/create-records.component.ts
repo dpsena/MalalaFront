@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{RecordsService} from '../../Services/records.service';
-<<<<<<< HEAD
 import{PathologyService} from '../../Services/pathology.service';
 import{FormBuilder,Validators,FormGroup} from '@angular/forms';
-
-=======
-import{FormBuilder,Validators,FormGroup} from '@angular/forms'
 const swal = require('sweetalert')
->>>>>>> 803e41d63eaa077cf5fd42e4f856d3b9c876f594
 
 @Component({
   selector: 'app-create-records',
