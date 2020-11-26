@@ -1,5 +1,56 @@
-.cont-form{
-    margin-left: 38%;
-   margin-top: 3%;
-   margin-bottom: 3%;
+
+
+.bodyRecords {
+    background-image:url('/assets/img/fondo.png');
+    background-color: #06070ece;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
+  
+.container {
+    width: 100%;
+    height: auto;
+    background-color: #34bcdb76  ;
+    box-shadow: rgba(93, 173, 226, 0.7) 2px 2px 1px,
+      rgba(133, 193, 233, 0.7) 3px 3px 2px, rgba(93, 173, 226, 0.7) 4px 4px 3px,
+      rgba(23, 32, 42, 1) 13px 13px 15px;
+    display: flex;
+    padding: 2%;
+    align-items: center;
+   
+  }
+  .section-history {
+    background-color: rgba(4, 101, 62, 0.163);
+    color: #06070e;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    border: #06070e 2px groove;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: oblique;
+    transition: 0.2s;
+    
+  }
+  .section-history:hover {
+    background-color: #09abc442;
+    color: whitesmoke;
+    font-family: cursive;
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: space-between;
+    color:rgb(7, 28, 164);
+    
+  }
+  .contenido {
+    margin-left: 45px;
+    width: 90%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.63);
+  }

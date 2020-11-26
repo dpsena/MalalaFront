@@ -1,7 +1,8 @@
-<div class="container-fluidmt-5 ">
+<div class="container-fluid bodyRecords" >
     <h1 class="text-center">Historial de Cita Paciente</h1>
+    <div  class="container">
     <form [formGroup]="createRecords" (ngSubmit)="saveRecords()">
-        <div class=" d-flex justify-content-center row cont-form">
+        <div class=" d-flex justify-content-center row">
             <div class="col mb-4">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
@@ -31,15 +32,13 @@
                                 </div>
                                
                             </div>
-                            <div class="row ">
-                                <button class="btn btn-success"><a routerLink="/recommendation">NEXT</a></button>
-
-                                <button class="btn btn-info">Guardar</button>
-                            </div>
+                           <button class="btn btn-info">Guardar</button>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
+</div>
 </div>
