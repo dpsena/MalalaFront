@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';  
 import {PathologyService } from '../../Services/pathology.service';
+const swal = require('sweetalert')
 @Component({
   selector: 'app-observation',
   templateUrl: './observation.component.html',
@@ -26,10 +27,11 @@ export class ObservationComponent implements OnInit {
 saveObservation(){
 
 if(this.observationForm.valid){
-
-  alert('se ha guardado correctamente la información')
+  swal('Proceso correcto',  'se ha guardado correctamente la información', 'success')
+  //alert('se ha guardado correctamente la información')
 }else{
-  alert('valide la informacion envio de observacion no válido')
+  swal('Proceso incorrecto',  'valide la informacion envio de observacion no válido', 'error')
+  //alert('valide la informacion envio de observacion no válido')
 }
 
 }
