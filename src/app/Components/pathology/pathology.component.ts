@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';  
 import {PathologyService } from '../../Services/pathology.service';
 import{Router} from '@angular/router';
+const swal = require('sweetalert')
 
 @Component({
   selector: 'app-pathology',
@@ -44,10 +45,11 @@ export class PathologyComponent implements OnInit {
   savePathology(){
 
     if(this.pathologyForm.valid){
-    
-      alert('se ha guardado correctamente la información')
+      swal('Proceso correcto',  'se ha guardado correctamente la información', 'success')
+      //alert('se ha guardado correctamente la información')
     }else{
-      alert('valide la informacion creación  de nuevas patologias invalido no válido')
+      swal('Proceso incorrecto',  'valide la informacion envio de observacion no válido', 'error')
+      //alert('valide la informacion creación  de nuevas patologias invalido no válido')
     }
     
     }
