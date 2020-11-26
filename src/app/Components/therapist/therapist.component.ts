@@ -43,6 +43,7 @@ export class TherapistComponent implements OnInit {
         }
       )
     }else{
+      
       alert('El formulario es incorrecto')
     }
   }

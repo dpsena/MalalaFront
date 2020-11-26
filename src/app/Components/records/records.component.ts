@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';  
 import { RecordsService} from '../../Services/records.service';
+const swal = require('sweetalert')
 
 @Component({
   selector: 'app-records',
@@ -31,9 +32,11 @@ export class RecordsComponent implements OnInit {
 
     
       if(this.recordsForm.valid){
-        alert('Se va a guardar la información')
+        swal('Proceso correcto',  'Se va a guardar la información', 'success')
+        //alert('Se va a guardar la información')
       }else{
-        alert('El formulario no es valido')
+        swal('Proceso incorrecto',  'El formulario no es valido', 'error')
+        //alert('El formulario no es valido')
       }
     }
 
