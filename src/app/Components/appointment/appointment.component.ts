@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { AppointmentService } from '../../Services/appointment.service';
 import { UserService } from '../../Services/user.service'
+const swal = require('sweetalert')
 
 @Component({
   selector: 'app-appointment',
@@ -41,7 +42,8 @@ export class AppointmentComponent implements OnInit {
       this.appointmentService.createAppointment(this.appointmentForm.value).subscribe(
         (appointmentCreated) => {
           console.log(appointmentCreated)
-          alert('La cita se creo correctamente')
+          swal('Proceso correcto',  'La cita se creo correctamente', 'success')
+          //alert('La cita se creo correctamente')
         },
         (error) => {
           console.error('Tuvimos un error ->', error)
@@ -49,7 +51,8 @@ export class AppointmentComponent implements OnInit {
         }
       )
     } else {
-      alert('El formulario es incorrecto')
+      swal('Proceso incorrecto', 'El formulario es incorrecto', 'error')
+      //alert('El formulario es incorrecto')
     }
   }
 
