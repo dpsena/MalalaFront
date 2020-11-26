@@ -55,7 +55,7 @@ const routesApp: Routes =[
   {path: 'appointment',canActivate: [AuthGuard], component:AppointmentComponent},
   {path: 'billing',canActivate: [AuthGuard], component:BillingComponent},
   {path: 'payment',canActivate: [AuthGuard], component:PaymentComponent},
-  {path: 'records',canActivate: [AuthGuard],data:{only:'Professional'}, component:RecordsComponent},
+  {path: 'records',canActivate: [AuthGuard],data:{only:'User'}, component:RecordsComponent},
   {path: 'recommendation',canActivate: [AuthGuard],data:{only:['Professional','User']}, component:RecordsComponent},
   {path: 'create-records',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
   {path: 'pathology',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
@@ -90,9 +90,7 @@ const routesApp: Routes =[
     RecommendationComponent,
     CreateRecordsComponent,
     PathologyComponent,
-    ObservationComponent,
-    
-   
+    ObservationComponent
   ],
   imports: [
     BrowserModule,
