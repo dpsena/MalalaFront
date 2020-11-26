@@ -45,14 +45,19 @@ export class PathologyComponent implements OnInit {
   savePathology(){
 
     if(this.pathologyForm.valid){
-      swal('Proceso correcto',  'se ha guardado correctamente la información', 'success')
-      //alert('se ha guardado correctamente la información')
+      this.pathologyService.createPathology(this.pathologyForm.value).subscribe(
+        (pathologyCreated) =>{
+          console.log(pathologyCreated)
+          swal('Proceso correcto',  'se ha guardado correctamente la información', 'success')
+        },
+        (error) =>{
+          console.error('tuvimos un error ->', error)
+        }
+      )
     }else{
       swal('Proceso incorrecto',  'valide la informacion envio de observacion no válido', 'error')
-      //alert('valide la informacion creación  de nuevas patologias invalido no válido')
-    }
-    
-    }
+    }   
+  }
   
    
 }
