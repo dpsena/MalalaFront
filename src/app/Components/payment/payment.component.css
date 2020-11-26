@@ -3,10 +3,7 @@
 
 
  /*CSS HEADER */
-.bg-pag{
-    /* background-color:#07070ea8  !important;*/
-     background-color: #06070E !important
- }
+
  .tit-text{
      font-size: 20px;
      color: rgb(0, 0, 0);
@@ -79,6 +76,9 @@
         color: #fff;
         transition: 0,5s ease-in;
         border-radius: 3%;
+        display: flex;
+        justify-content: center;
+        
     }
     .boton:hover{
        background-color:  #06070E  ;

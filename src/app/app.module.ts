@@ -35,6 +35,7 @@ import { ObservationComponent } from './Components/observation/observation.compo
 
 
 
+
 const routesApp: Routes =[
   {path: '', component: HomeComponent },
   {path: 'sing-up', component: SingUpComponent},
@@ -59,6 +60,7 @@ const routesApp: Routes =[
   {path: 'create-records',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
   {path: 'pathology',canActivate: [AuthGuard],data:{only:'Professional'}, component:CreateRecordsComponent},
   {path: 'observation',canActivate: [AuthGuard],data:{only:['Professional','User']}, component:CreateRecordsComponent},
+  
 ]
 
 @NgModule({
@@ -88,7 +90,9 @@ const routesApp: Routes =[
     RecommendationComponent,
     CreateRecordsComponent,
     PathologyComponent,
-    ObservationComponent  
+    ObservationComponent,
+    
+   
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+const swal = require('sweetalert')
 
 @Component({
   selector: 'app-contact',
@@ -33,9 +34,11 @@ export class ContactComponent implements OnInit {
   }
   saveContact(){
     if(this.contactForm.valid){
-      alert('La información será enviada')
+      swal('Proceso correcto', 'La información será enviada', 'sucess')
+      //alert('La información será enviada')
     }else{
-      alert('El formulario es incorrecto')
+      swal('Proceso incorrecto', 'El formulario es incorrecto', 'error')
+      //alert('El formulario es incorrecto')
     }
   }
 

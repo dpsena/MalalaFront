@@ -1,38 +1,26 @@
 <div class="conteiner img-fondo">
+  <br>
+  <div class="form-group text-center pt-3">
+    <p class="text-light">Bienvenido, gracias por confiar en nosotros <br> y hacer parte de nuestro equipo Ataraxia.</p>
+  </div>
   <div class="form-row justify-content-center pt-5">
     <div class="form-group col-md-8 formulario">
       <div class="form-group text-center pt-3">
         <h1 class="text-dark">Pago</h1>
       </div>
-      <form [formGroup]="paymentForm" (ngSubmit)="savePayment()">
+
+      <form [formGroup]="paymentForm" (ngSubmit)="paymentSave()">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <input
-              formControlName="numberCard"
-              type="text"
-              class="form-control"
-              id="numerotarjeta"
-              placeholder="Número tarjeta"
-            />
-            <p
-              *ngIf="paymentForm.get('numberCard').errors?.minlength"
-              class="error-message"
-            >
+            <input formControlName="numberCard" type="text" class="form-control" id="Card"
+              placeholder="Número tarjeta" />
+            <p *ngIf="paymentForm.get('numberCard').errors?.minlength" class="error-message">
               El número de la tarjeta debe tener 16 caracteres
             </p>
           </div>
           <div class="form-group col-md-6">
-            <input
-              formControlName="email"
-              type="email"
-              class="form-control"
-              id="correo"
-              placeholder="Correo"
-            />
-            <p
-              *ngIf="paymentForm.get('email').hasError('email')"
-              class="error-message"
-            >
+            <input formControlName="email" type="email" class="form-control" id="correo" placeholder="Correo" />
+            <p *ngIf="paymentForm.get('email').hasError('email')" class="error-message">
               El correo electronico es incorrecto
             </p>
           </div>
@@ -40,52 +28,37 @@
 
         <div class="form-row">
           <div class="form-group col-md-6">
-            <input
-              formControlName="password"
-              type="password"
-              class="form-control"
-              id="contrasena"
-              placeholder="Contraseña"
-            />
-            <p
-              *ngIf="paymentForm.get('password').errors?.minlength"
-              class="error-message"
-            >
-              La contraseña debe tener mas de 6 caracteres
-            </p>
+            <p>Fecha</p>
+            <input formControlName="date" type="date" class="form-control" id="date" placeholder="Fecha" />
           </div>
+
           <div class="form-group col-md-6">
-            <input
-              type="number"
-              class="form-control"
-              id="pago"
-              placeholder="Pago total"
-            />
+            <p>Pago total</p>
+            <input formControlName="totalPayment" type="number" class="form-control" id="totalPayment" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
-            <input
-              type="date"
-              class="form-control"
-              id="fecha"
-              placeholder="Fecha"
-            />
+            <label>Metodo de pago</label>
+            <input formControlName="paymentMethods"  id="paymentMethods" type="hidden" class="form-control">
+            <div class="row">
+              <div class="col">
+                <select class="form-control" (click)="savePaymentMethods ($event)">
+                  <option *ngFor="let u of allPaymentMethods" value="{{u._id}}">{{u.paymentMethods}}</option>
+                </select>
+              </div>
+
+            </div>
           </div>
-          <div class="form-group col-md-6">
-            <select class="form-control" name="tarjeta" id="tarjeta">
-              <option value="1">Seleccione una opción</option>
-              <option value="cedula">Tarjeta crédito </option>
-              <option value="cedulaExtr">Tarjeta débito </option>
-            </select>
-          </div>
+
         </div>
 
 
-        <div class="btn-group container-bn row mt-5">
-          <button type="button" class="btn btn-block boton">Pagar</button>
+        <div class="form-group mx-sm-4 pb-">
+          <button class="btn btn-block boton">Enviar</button>
         </div>
+
       </form>
     </div>
   </div>

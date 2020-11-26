@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';  
 import { UserService } from '../../Services/user.service';
-
+const swal = require('sweetalert')
 
 @Component({
   selector: 'app-sing-up',
@@ -40,14 +40,17 @@ export class SingUpComponent implements OnInit {
         this.userService.createUser(this.signForm.value).subscribe(
         (userCreated) => {
           console.log(userCreated)
-          alert('el usuario se creo correctamente')},
+          swal('Proceso correcto',  'el usuario se creo correctamente', 'success')
+          //alert('el usuario se creo correctamente')
+        },
           (error) =>{
             console.error('tuvimos un error ->', error)
   
           }
         )
       }else{
-        alert('El formulario es incorrecto')
+        swal('Proceso incorrecto',  'El formulario es incorrecto', 'error')
+       // alert('El formulario es incorrecto')
       }
     }
 }

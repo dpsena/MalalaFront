@@ -3,6 +3,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import {Router} from '@angular/router';
 import {UserService} from '../../Services/user.service';
 import {StorageService} from '../../Services/storage.service';
+const swal = require('sweetalert')
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -50,7 +51,8 @@ export class LoginComponent implements OnInit {
           }
         )
     }else{
-      alert('Debes llenar todos los campos.')
+      swal('Proceso incorrecto',  'Debes llenar todos los campos.', 'error')
+      //alert('Debes llenar todos los campos.')
     }
   }
 
