@@ -27,4 +27,16 @@ export class RecordsComponent implements OnInit {
     })
   }
 
+  saveRecord(){
+
+    
+      if(this.recordsForm.valid){
+        alert('Se va a guardar la información')
+      }else{
+        alert('El formulario no es valido')
+      }
+    }
+
+  
+
 }

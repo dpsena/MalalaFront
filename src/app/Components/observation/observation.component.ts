@@ -21,8 +21,17 @@ export class ObservationComponent implements OnInit {
       date:[ '', Validators.required ],
       user:[ '', Validators.required ]
     })
-  }
+  } 
 
+saveObservation(){
 
+if(this.observationForm.valid){
+
+  alert('se ha guardado correctamente la información')
+}else{
+  alert('valide la informacion envio de observacion no válido')
+}
+
+}
 
 }
