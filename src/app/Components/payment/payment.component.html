@@ -45,8 +45,8 @@
             <input formControlName="paymentMethods"  id="paymentMethods" type="hidden" class="form-control">
             <div class="row">
               <div class="col">
-                <select class="form-control" (click)="savePaymentMethods ($event)">
-                  <option *ngFor="let u of allPaymentMethods" value="{{u._id}}">{{u.paymentMethods}}</option>
+                <select class="form-control" (click)="savePaymentMethods($event)">
+                  <option *ngFor="let u of allPaymentMethods" value="{{u._id}}">{{u._id}}</option>
                 </select>
               </div>
 
