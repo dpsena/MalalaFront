@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
-import{User}from '../Models/User';
 import { RecordsComponent } from '../Components/records/records.component';
 
 @Injectable({
@@ -11,6 +10,7 @@ export class RecordsService {
   apiURL:String='https://ataraxia-salud.herokuapp.com';
   constructor(
     private http:HttpClient,
+    
   ) { }
 
   createRecord(formData){
