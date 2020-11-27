@@ -32,7 +32,7 @@ export class PaymentComponent implements OnInit {
     this.paymentForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email] ],
       date:[''],
-      status: ['True'],
+      status:[1],
       paymentMethods: ['', Validators.required],
       totalPayment:['', Validators.required],
       numberCard: ['', [Validators.required, Validators.minLength(16)]],
@@ -42,7 +42,6 @@ export class PaymentComponent implements OnInit {
   paymentSave() {
     if (this.paymentForm.valid) {
       this.paymentService.createPayment(this.paymentForm.value).subscribe(
-
         (paymentCreated) => {
           console.log(paymentCreated)
           swal('Proceso correcto',  'El pago ha sido exitoso', 'success')

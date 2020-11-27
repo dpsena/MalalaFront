@@ -8,20 +8,29 @@
 .font{
     font-size: 20px;
     color: white;
+    
 }
 .bg-color{
     background-color: transparent !important;
 }
 .tit-nav{
-    font-size: 50px;
-    color: white;
-    text-align: center;
+    color: #FFFFFF;
+text-align: center;
+font-size: 50px;
+color: #FFFFFF;
+padding-top: 3%;
+text-shadow: 3px 5px 2px #000000;
+
+
+
 }
 .tit-text{
     font-size: 20px;
     color: white;
     text-align: center;
     padding-top: 5%;
+    
+text-shadow: 3px 3px 2px #000000;
 }
 .tit-text2{
     font-size: 25px;
@@ -30,6 +39,7 @@
     padding-top: 3%;
     margin-left: 3%;
     padding-bottom: 3%;
+    text-shadow: 3px 3px 2px #000000;
 }
 .tit-btn{
     background-color: #5af299;
