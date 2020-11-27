@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { StorageService } from '../Services/storage.service';
+const swal = require('sweetalert')
 @Injectable({
   providedIn: 'root'
 })
@@ -23,8 +24,8 @@ export class AuthGuard implements CanActivate {
         if((infoUser.role == 'Professional' && route.data.only == 'Professional') || !route.data.only){
           return true
         }else{
-          alert('No tienes Permisos para ingresar a esa página')
-          this.router.navigate(['/'])
+          swal('Proceso incorrecto', 'No tienes Permisos para ingresar a esa página', 'error')
+          this.router.navigate(['/home-patient'])
           return false
         }
       }else{
