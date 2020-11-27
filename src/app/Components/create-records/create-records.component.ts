@@ -18,7 +18,7 @@ export class CreateRecordsComponent implements OnInit {
   allPathology: any
   allPatient: any
   userPathology:Array<any>=[]
-  patients:Array<any>=[]
+
   constructor(
   private formBuilder:FormBuilder,
   private recordsService:RecordsService,
@@ -28,8 +28,7 @@ export class CreateRecordsComponent implements OnInit {
 
   ) { 
     this.validator(),
-    this.getPathology(),
-    this.getAllUser()
+    this.getPathology()
   }
 
   ngOnInit(): void {}
@@ -47,26 +46,7 @@ export class CreateRecordsComponent implements OnInit {
     })
 
   }
-  getAllUser(){
-    this.userService.getAll().subscribe(
-      (user) => {
-        const patientsUser = this.storageService.dataUser()
-            console.log(patientsUser)
-        if (patientsUser.role == 'User') {
-          if (this.storageService.getToken() != null) {
-            this.allPatient = user
-               return true
-          } else {
-            /* swal('Proceso incorrecto', 'No tiene Pacientes asociados en este momento', 'error') */
-            return false
-          }
-        }
-      },
-      (error) =>{
-        console.error('Error -> ', error)
-      }
-    )
-  }
+
  
   getPathology(){
     this.pathologyService.getAll().subscribe(
@@ -94,22 +74,7 @@ export class CreateRecordsComponent implements OnInit {
     }
     this.createRecords.get('Pathology').setValue(valueInput)
   }
-  savePatient(event){
-    console.log(event.target.value)
-    if( this.patients.includes(event.target.value) ){
-      const index = this.allPatient.indexOf(event.target.value)
-      this.patients.splice(index, 1)
-    }else{
-      this.patients.push(event.target.value)
-    }
-
-    let valueInput: any = ''
-
-    if(this.patients.length > 0){
-      valueInput = this.patients
-    }
-    this.createRecords.get('list-user').setValue(valueInput)
-  }
+  
   saveRecords(){
     if (this.createRecords.valid) {
       this.recordsService.createRecord(this.createRecords.value).subscribe(
