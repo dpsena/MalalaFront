@@ -2,7 +2,7 @@
   <br>
   <div class="form-group text-center pt-3">
     <p class="text-light">Bienvenido, gracias por confiar en nosotros,<br> recuerda que por la primera sesión no pagaras nada. <br>
-     El costo de la sesión es de 70.000</p>
+     El costo apartir de la segunda sesión es de 70.000</p>
   </div>
   <div class="form-row justify-content-center pt-5">
     <div class="form-group col-md-8 formulario">
@@ -46,7 +46,7 @@
             <div class="row">
               <div class="col">
                 <select class="form-control" (click)="savePaymentMethods($event)">
-                  <option *ngFor="let u of allPaymentMethods" value="{{u._id}}">{{u._id}}</option>
+                  <option *ngFor="let u of allPaymentMethods" value="{{u._id}}">{{u.paymentMethods}}</option>
                 </select>
               </div>
 
