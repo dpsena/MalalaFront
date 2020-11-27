@@ -29,7 +29,6 @@ export class PathologyComponent implements OnInit {
     this.pathologyForm = this.formBuilder.group({
     name:[ '', Validators.required ],
     characteristics:[ '', Validators.required ]
-
     })
   }
   getAll(){
@@ -47,6 +46,7 @@ export class PathologyComponent implements OnInit {
     if(this.pathologyForm.valid){
       this.pathologyService.createPathology(this.pathologyForm.value).subscribe(
         (pathologyCreated) =>{
+          
           console.log(pathologyCreated)
           swal('Proceso correcto',  'se ha guardado correctamente la información', 'success')
         },
